@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="ja" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>日本語教室えがお | Japanese Language School Egao</title>
+  <meta name="description" content="日本語教室えがお（Japanese Language School Egao）公式サイト。特定技能外国人材への日本語研修を中心に、一人ひとりに寄り添う実践的な日本語教育を届けます。" />
+
+  <!-- Google Fonts: Klee One & BIZ UDPGothic (Web Fallback for UD Digital Kyokasho) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=BIZ+UDPGothic:wght@400;700&family=Klee+One:wght@400;600&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: [
+              '"UD デジタル 教科書体 NP-R"',
+              '"UD Digi Kyokasho NP-R"',
+              '"UD デジタル 教科書体 N-R"',
+              '"UD Digi Kyokasho N-R"',
+              '"UD デジタル 教科書体 NK-R"',
+              '"UD Digi Kyokasho NK-R"',
+              '"YuKyokasho Yoko"',
+              '"游教科書体 横用"',
+              '"YuKyokasho"',
+              '"游教科書体"',
+              '"Klee One"',
+              '"BIZ UDPGothic"',
+              'sans-serif'
+            ]
+          },
+          colors: {
+            warm: {
+              ivory: '#FAF7F2',
+              white: '#FFFFFF',
+              cream: '#F5EFE6',
+              border: '#E6DDD2',
+              text: '#3D3834',
+              muted: '#6B625B',
+              terracotta: '#D97757',
+              terracottaLight: '#FBF0EC',
+              sage: '#6B9080',
+              sageLight: '#EEF4F1'
+            }
+          }
+        }
+      }
+    };
+  </script>
+
+  <style>
+    /* Global Font Enforcement: UD Digital Kyokasho across all elements */
+    html, body, button, input, select, textarea, table, th, td, dl, dt, dd, nav, footer, a, p, span, li {
+      font-family: "UD デジタル 教科書体 NP-R", "UD Digi Kyokasho NP-R", "UD デジタル 教科書体 N-R", "UD Digi Kyokasho N-R", "UD デジタル 教科書体 NK-R", "UD Digi Kyokasho NK-R", "YuKyokasho Yoko", "游教科書体 横用", "YuKyokasho", "游教科書体", "Klee One", "BIZ UDPGothic", sans-serif;
+    }
+
+    /* Bold Weight Mapping to UD Digital Kyokasho Bold Faces */
+    h1, h2, h3, h4, th, dt, strong, b, .font-semibold, .font-bold {
+      font-family: "UD デジタル 教科書体 NP-B", "UD Digi Kyokasho NP-B", "UD デジタル 教科書体 N-B", "UD Digi Kyokasho N-B", "UD デジタル 教科書体 NK-B", "UD Digi Kyokasho NK-B", "UD デジタル 教科書体 NP-R", "UD Digi Kyokasho NP-R", "YuKyokasho Yoko", "游教科書体 横用", "YuKyokasho", "游教科書体", "Klee One", "BIZ UDPGothic", sans-serif;
+      font-weight: 600;
+    }
+
+    /* Language Toggle Visibility */
+    body[data-lang="ja"] .lang-en {
+      display: none !important;
+    }
+    body[data-lang="en"] .lang-ja {
+      display: none !important;
+    }
+
+    /* Subtle Warm Radial Accent */
+    .hero-soft-bg {
+      background: radial-gradient(circle at 85% 18%, rgba(217, 119, 87, 0.09) 0%, rgba(107, 144, 128, 0.08) 48%, rgba(250, 247, 242, 0) 78%);
+    }
+
+    /* A4 Print & PDF Export Optimization */
+    @media print {
+      @page {
+        size: A4 portrait;
+        margin: 12mm 14mm;
+      }
+      body {
+        background: #FFFFFF !important;
+        color: #2B2724 !important;
+        font-size: 9.8pt;
+        line-height: 1.5;
+      }
+      .no-print {
+        display: none !important;
+      }
+      header {
+        position: static !important;
+        background: #FFFFFF !important;
+        border-bottom: 1.5px solid #D97757 !important;
+      }
+      .hero-soft-bg {
+        background: none !important;
+      }
+      section {
+        padding-top: 10px !important;
+        padding-bottom: 10px !important;
+        break-inside: avoid;
+      }
+      .print-box {
+        background: #FFFFFF !important;
+        box-shadow: none !important;
+        border: 1px solid #D8CFC4 !important;
+        break-inside: avoid;
+      }
+      .print-url-badge {
+        background: #F9F7F4 !important;
+        border: 1px solid #D8CFC4 !important;
+        color: #2B2724 !important;
+      }
+      a {
+        text-decoration: none !important;
+        color: inherit !important;
+      }
+    }
+  </style>
+</head>
+<body data-lang="ja" class="bg-warm-ivory text-warm-text antialiased selection:bg-warm-terracotta selection:text-white">
+
+  <!-- Header -->
+  <header class="sticky top-0 z-40 bg-warm-ivory/95 backdrop-blur-sm border-b border-warm-border">
+    <div class="max-w-4xl mx-auto px-5 sm:px-8 h-20 flex items-center justify-between">
+      <!-- School Brand -->
+      <a href="#" class="flex items-center gap-3.5 group">
+        <div class="w-10 h-10 rounded-2xl bg-warm-terracottaLight border border-warm-terracotta/25 flex items-center justify-center shrink-0 transition group-hover:scale-105">
+          <svg class="w-6 h-6" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M14 15V7.5" stroke="#6B9080" stroke-width="2.1" stroke-linecap="round"/>
+            <path d="M14 11C14 7.8 11.2 5.5 7.8 6C7.5 9.2 10.2 11.5 14 11Z" fill="#6B9080" fill-opacity="0.22" stroke="#6B9080" stroke-width="1.8" stroke-linejoin="round"/>
+            <path d="M14 9.5C14 6.8 16.5 4.8 19.8 5.3C20 8.2 17.5 10.2 14 9.5Z" fill="#6B9080" fill-opacity="0.22" stroke="#6B9080" stroke-width="1.8" stroke-linejoin="round"/>
+            <path d="M8.5 18.5C10 21 12 22 14 22C16 22 18 21 19.5 18.5" stroke="#D97757" stroke-width="2.1" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <div>
+          <div class="text-lg sm:text-xl font-bold tracking-wide text-warm-text leading-snug">
+            <span class="lang-ja">日本語教室えがお</span>
+            <span class="lang-en">Japanese Language School Egao</span>
+          </div>
+          <div class="text-xs text-warm-muted tracking-wide">
+            <span class="lang-ja">Japanese Language School Egao</span>
+            <span class="lang-en">日本語教室えがお</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- Navigation & Language Switcher -->
+      <div class="flex items-center gap-5 sm:gap-7 no-print">
+        <nav class="hidden md:flex items-center gap-6 text-sm text-warm-muted">
+          <a href="#courses" class="hover:text-warm-terracotta transition">
+            <span class="lang-ja">コース・取り組み</span>
+            <span class="lang-en">Courses</span>
+          </a>
+          <a href="#partnership" class="hover:text-warm-terracotta transition">
+            <span class="lang-ja">国際連携</span>
+            <span class="lang-en">Partnership</span>
+          </a>
+          <a href="#overview" class="hover:text-warm-terracotta transition">
+            <span class="lang-ja">教室概要</span>
+            <span class="lang-en">Overview</span>
+          </a>
+          <a href="#contact" class="hover:text-warm-terracotta transition">
+            <span class="lang-ja">お問い合わせ</span>
+            <span class="lang-en">Contact</span>
+          </a>
+        </nav>
+
+        <!-- Language Switcher -->
+        <div class="inline-flex rounded-full bg-warm-white border border-warm-border p-0.5 shadow-sm" role="group" aria-label="言語切り替え / Language Switcher">
+          <button id="btnLangJa" type="button" onclick="setLanguage('ja')" class="px-3 py-1 rounded-full text-xs font-bold bg-warm-terracotta text-white transition">
+            日本語
+          </button>
+          <button id="btnLangEn" type="button" onclick="setLanguage('en')" class="px-3 py-1 rounded-full text-xs text-warm-muted hover:text-warm-text transition">
+            English
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- 1. Hero Section -->
+    <section class="hero-soft-bg pt-14 pb-14 sm:pt-20 sm:pb-20">
+      <div class="max-w-4xl mx-auto px-5 sm:px-8">
+        <div class="bg-warm-white rounded-3xl border border-warm-border p-8 sm:p-12 shadow-sm print-box">
+          <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-warm-sageLight text-warm-sage text-xs sm:text-sm font-bold mb-6">
+            <span class="w-2 h-2 rounded-full bg-warm-sage"></span>
+            <span class="lang-ja">日本語教室えがお</span>
+            <span class="lang-en">Japanese Language School Egao</span>
+          </div>
+
+          <h1 class="text-2xl sm:text-4xl font-bold text-warm-text leading-relaxed sm:leading-[1.5] tracking-wide">
+            <span class="lang-ja">ことばでつながる、笑顔でつづく。</span>
+            <span class="lang-en">Connecting through Language, Continuing with Smiles.</span>
+          </h1>
+
+          <p class="mt-6 text-base sm:text-lg text-warm-muted leading-loose max-w-3xl">
+            <span class="lang-ja">
+              一人ひとりに寄り添い、日本で働く外国人材と現場をつなぐ実践的な日本語教育を届けます。特定技能外国人材への日本語研修を中心に、安心して働き暮らせる確かなことばの力を育みます。
+            </span>
+            <span class="lang-en">
+              Supporting each learner closely, we deliver practical Japanese language education that connects foreign professionals working in Japan with their workplaces. Centered on Japanese training for Specified Skilled Workers, we nurture reliable communication skills for daily work and life.
+            </span>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. Courses & Initiatives Section -->
+    <section id="courses" class="py-12 sm:py-16">
+      <div class="max-w-4xl mx-auto px-5 sm:px-8">
+        <div class="mb-9 sm:mb-11">
+          <p class="text-xs font-bold tracking-widest uppercase text-warm-terracotta">Courses &amp; Programs</p>
+          <h2 class="text-xl sm:text-2xl font-bold text-warm-text mt-1.5">
+            <span class="lang-ja">コース・取り組み案内</span>
+            <span class="lang-en">Courses &amp; Initiatives</span>
+          </h2>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-6">
+          <!-- Course 1 -->
+          <div class="bg-warm-white rounded-2xl border border-warm-border p-6 sm:p-7 shadow-sm flex flex-col print-box">
+            <div class="w-11 h-11 rounded-2xl bg-warm-terracottaLight text-warm-terracotta flex items-center justify-center mb-5 shrink-0">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.9" viewBox="0 0 24 24" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"/>
+              </svg>
+            </div>
+            <h3 class="text-base sm:text-lg font-bold text-warm-text mb-3 leading-snug">
+              <span class="lang-ja">特定技能外国人材への日本語研修</span>
+              <span class="lang-en">Japanese Training for Specified Skilled Workers</span>
+            </h3>
+            <p class="text-sm sm:text-[15px] text-warm-muted leading-relaxed">
+              <span class="lang-ja">
+                職場で安心して働き、周囲と円滑にコミュニケーションをとるための実践的な会話・生活日本語を丁寧に指導します。
+              </span>
+              <span class="lang-en">
+                Practical conversation and daily-life Japanese instruction so learners can work with confidence and communicate smoothly with colleagues.
+              </span>
+            </p>
+          </div>
+
+          <!-- Course 2 -->
+          <div class="bg-warm-white rounded-2xl border border-warm-border p-6 sm:p-7 shadow-sm flex flex-col print-box">
+            <div class="w-11 h-11 rounded-2xl bg-warm-sageLight text-warm-sage flex items-center justify-center mb-5 shrink-0">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.9" viewBox="0 0 24 24" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
+              </svg>
+            </div>
+            <h3 class="text-base sm:text-lg font-bold text-warm-text mb-3 leading-snug">
+              <span class="lang-ja">日本語能力試験（JLPT）対策</span>
+              <span class="lang-en">JLPT Exam Preparation</span>
+            </h3>
+            <p class="text-sm sm:text-[15px] text-warm-muted leading-relaxed">
+              <span class="lang-ja">
+                丸暗記に頼らない基礎文法の体系的な理解から、N3〜N1合格に向けた着実なステップアップ指導までオンラインで柔軟に対応します。
+              </span>
+              <span class="lang-en">
+                From systematic comprehension of foundational grammar without rote memorization to steady step-up instruction aimed at passing JLPT N3 to N1.
+              </span>
+            </p>
+          </div>
+
+          <!-- Course 3 -->
+          <div class="bg-warm-white rounded-2xl border border-warm-border p-6 sm:p-7 shadow-sm flex flex-col print-box">
+            <div class="w-11 h-11 rounded-2xl bg-warm-terracottaLight text-warm-terracotta flex items-center justify-center mb-5 shrink-0">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.9" viewBox="0 0 24 24" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"/>
+              </svg>
+            </div>
+            <h3 class="text-base sm:text-lg font-bold text-warm-text mb-3 leading-snug">
+              <span class="lang-ja">日常・職場での会話ブラッシュアップ</span>
+              <span class="lang-en">Everyday &amp; Workplace Conversation</span>
+            </h3>
+            <p class="text-sm sm:text-[15px] text-warm-muted leading-relaxed">
+              <span class="lang-ja">
+                クッション言葉や敬語、報連相など、日本の職場文化に根ざした自然で温かみのある表現の習得をサポートします。
+              </span>
+              <span class="lang-en">
+                Supporting the acquisition of natural, considerate expressions rooted in Japanese workplace culture, including polite phrasing, honorifics, and clear reporting.
+              </span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. International Partnership Section (with Official URLs) -->
+    <section id="partnership" class="py-12 sm:py-16">
+      <div class="max-w-4xl mx-auto px-5 sm:px-8">
+        <div class="bg-warm-cream rounded-3xl border border-warm-border p-7 sm:p-10 print-box">
+          <p class="text-xs font-bold tracking-widest uppercase text-warm-sage">International Partnership</p>
+          <h2 class="text-xl sm:text-2xl font-bold text-warm-text mt-1.5">
+            <span class="lang-ja">ミャンマー現地機関との連携</span>
+            <span class="lang-en">Partnership with Institutions in Myanmar</span>
+          </h2>
+
+          <p class="mt-4 text-sm sm:text-base text-warm-text leading-loose">
+            <span class="lang-ja">
+              当教室は、ミャンマー・ヤンゴンの現地法人および日本語学校と緊密に連携し、来日前の現地教育から来日後の継続学習・定着まで一貫したサポートを行っています。
+            </span>
+            <span class="lang-en">
+              We collaborate closely with our partner company and Japanese language school in Yangon, Myanmar, providing consistent support from pre-arrival education to ongoing learning after arriving in Japan.
+            </span>
+          </p>
+
+          <!-- Partner Cards with Clickable & Print-Legible URLs -->
+          <div class="mt-7 grid md:grid-cols-2 gap-5">
+            <!-- Card 1: Smile Dream Co.,Ltd. -->
+            <div class="bg-warm-white rounded-2xl border border-warm-border p-6 shadow-sm flex flex-col justify-between print-box">
+              <div>
+                <span class="inline-block px-3 py-0.5 rounded-full bg-warm-terracottaLight text-warm-terracotta text-xs font-bold mb-2.5">
+                  Yangon, Myanmar
+                </span>
+                <h3 class="text-base sm:text-lg font-bold text-warm-text">
+                  Smile Dream Co.,Ltd.
+                </h3>
+                <p class="mt-2.5 text-sm text-warm-muted leading-relaxed">
+                  <span class="lang-ja">
+                    ミャンマー・ヤンゴンにて特定技能外国人への就労支援を主軸事業として展開する現地法人。日本国内の窓口・連携パートナーとして、入国前から入国後まで一貫した日本語学習・定着をサポートしています。
+                  </span>
+                  <span class="lang-en">
+                    A local corporation in Yangon, Myanmar focusing on employment support for Specified Skilled Workers. As its domestic liaison and partner in Japan, we support continuous Japanese learning from pre-arrival through post-arrival settlement.
+                  </span>
+                </p>
+              </div>
+
+              <!-- Official Website URL Link -->
+              <div class="mt-5 pt-4 border-t border-warm-border/80">
+                <div class="text-xs font-bold text-warm-muted mb-1.5">
+                  <span class="lang-ja">公式Webサイト</span>
+                  <span class="lang-en">Official Website</span>
+                </div>
+                <a
+                  href="https://www.smiledream-mm.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="print-url-badge group inline-flex items-center justify-between gap-2 w-full px-3.5 py-2.5 rounded-xl bg-warm-ivory hover:bg-warm-terracottaLight/70 border border-warm-border hover:border-warm-terracotta/50 text-warm-text transition"
+                >
+                  <span class="text-xs sm:text-sm font-bold text-warm-terracotta group-hover:underline break-all leading-snug">
+                    https://www.smiledream-mm.com/
+                  </span>
+                  <svg class="w-4 h-4 text-warm-terracotta shrink-0 no-print transition-transform group-hover:translate-x-0.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
+                  </svg>
+                </a>
+              </div>
+            </div>
+
+            <!-- Card 2: Rashinban Japanese Language School -->
+            <div class="bg-warm-white rounded-2xl border border-warm-border p-6 shadow-sm flex flex-col justify-between print-box">
+              <div>
+                <span class="inline-block px-3 py-0.5 rounded-full bg-warm-sageLight text-warm-sage text-xs font-bold mb-2.5">
+                  Yangon, Myanmar
+                </span>
+                <h3 class="text-base sm:text-lg font-bold text-warm-text leading-snug">
+                  Rashinban Japanese Language School
+                  <span class="block text-xs sm:text-sm font-normal text-warm-muted mt-0.5">（Rashinban JLS）</span>
+                </h3>
+                <p class="mt-2.5 text-sm text-warm-muted leading-relaxed">
+                  <span class="lang-ja">
+                    Smile Dream Co.,Ltd.がヤンゴンで運営する日本語学校。暗記に頼らない体系的な文法指導や会話教育のカリキュラム共有・教育連携を実施しています。
+                  </span>
+                  <span class="lang-en">
+                    A Japanese language school in Yangon operated by Smile Dream Co.,Ltd. Together we share curricula and conduct educational collaboration centered on systematic grammar and practical conversation.
+                  </span>
+                </p>
+              </div>
+
+              <!-- Official Facebook URL Link -->
+              <div class="mt-5 pt-4 border-t border-warm-border/80">
+                <div class="text-xs font-bold text-warm-muted mb-1.5">
+                  <span class="lang-ja">公式Facebookページ</span>
+                  <span class="lang-en">Official Facebook Page</span>
+                </div>
+                <a
+                  href="https://www.facebook.com/RashinbanJapaneseLanguageSchool/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="print-url-badge group inline-flex items-center justify-between gap-2 w-full px-3.5 py-2.5 rounded-xl bg-warm-ivory hover:bg-warm-sageLight/80 border border-warm-border hover:border-warm-sage/50 text-warm-text transition"
+                >
+                  <span class="text-xs sm:text-[13px] font-bold text-warm-sage group-hover:underline break-all leading-snug">
+                    https://www.facebook.com/RashinbanJapaneseLanguageSchool/
+                  </span>
+                  <svg class="w-4 h-4 text-warm-sage shrink-0 no-print transition-transform group-hover:translate-x-0.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. School Overview Section -->
+    <section id="overview" class="py-12 sm:py-16">
+      <div class="max-w-4xl mx-auto px-5 sm:px-8">
+        <div class="mb-8">
+          <p class="text-xs font-bold tracking-widest uppercase text-warm-terracotta">Overview</p>
+          <h2 class="text-xl sm:text-2xl font-bold text-warm-text mt-1.5">
+            <span class="lang-ja">教室概要</span>
+            <span class="lang-en">School Overview</span>
+          </h2>
+        </div>
+
+        <div class="bg-warm-white rounded-3xl border border-warm-border overflow-hidden shadow-sm print-box">
+          <dl class="divide-y divide-warm-border text-sm sm:text-base">
+            <!-- Name -->
+            <div class="px-6 py-4 sm:px-8 sm:py-5 grid sm:grid-cols-3 gap-1 sm:gap-4">
+              <dt class="font-bold text-warm-muted">
+                <span class="lang-ja">名称</span>
+                <span class="lang-en">Name</span>
+              </dt>
+              <dd class="sm:col-span-2 text-warm-text">
+                <span class="lang-ja">日本語教室えがお（Japanese Language School Egao）</span>
+                <span class="lang-en">Japanese Language School Egao (日本語教室えがお)</span>
+              </dd>
+            </div>
+
+            <!-- Representative -->
+            <div class="px-6 py-4 sm:px-8 sm:py-5 grid sm:grid-cols-3 gap-1 sm:gap-4">
+              <dt class="font-bold text-warm-muted">
+                <span class="lang-ja">代表</span>
+                <span class="lang-en">Representative</span>
+              </dt>
+              <dd class="sm:col-span-2 text-warm-text">
+                <span class="lang-ja">服部 三郎（日本語教育能力検定試験 合格）</span>
+                <span class="lang-en">Saburo Hattori (Passed the Japanese Language Teaching Competency Test)</span>
+              </dd>
+            </div>
+
+            <!-- Established -->
+            <div class="px-6 py-4 sm:px-8 sm:py-5 grid sm:grid-cols-3 gap-1 sm:gap-4">
+              <dt class="font-bold text-warm-muted">
+                <span class="lang-ja">創業</span>
+                <span class="lang-en">Established</span>
+              </dt>
+              <dd class="sm:col-span-2 text-warm-text">
+                <span class="lang-ja">2023年1月</span>
+                <span class="lang-en">January 2023</span>
+              </dd>
+            </div>
+
+            <!-- Address -->
+            <div class="px-6 py-4 sm:px-8 sm:py-5 grid sm:grid-cols-3 gap-1 sm:gap-4">
+              <dt class="font-bold text-warm-muted">
+                <span class="lang-ja">所在地</span>
+                <span class="lang-en">Location</span>
+              </dt>
+              <dd class="sm:col-span-2 text-warm-text">
+                <span class="lang-ja">〒591-8021 大阪府堺市北区新金岡町4丁8番1-1018号</span>
+                <span class="lang-en">4-8-1-1018 Shinkanaoka-cho, Kita-ku, Sakai-shi, Osaka 591-8021, Japan</span>
+              </dd>
+            </div>
+
+            <!-- Business Activities -->
+            <div class="px-6 py-4 sm:px-8 sm:py-5 grid sm:grid-cols-3 gap-1 sm:gap-4">
+              <dt class="font-bold text-warm-muted">
+                <span class="lang-ja">事業内容</span>
+                <span class="lang-en">Services</span>
+              </dt>
+              <dd class="sm:col-span-2 text-warm-text leading-relaxed">
+                <span class="lang-ja">特定技能外国人材への日本語研修、オンライン日本語指導、教育カリキュラム策定・現地校連携</span>
+                <span class="lang-en">Japanese language training for Specified Skilled Workers, online Japanese instruction, curriculum development &amp; overseas partner school collaboration</span>
+              </dd>
+            </div>
+          </dl>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. Contact Section -->
+    <section id="contact" class="pt-6 pb-20 sm:pt-8 sm:pb-24">
+      <div class="max-w-4xl mx-auto px-5 sm:px-8">
+        <div class="bg-warm-terracottaLight/60 rounded-3xl border border-warm-terracotta/25 p-7 sm:p-10 text-center print-box">
+          <h2 class="text-lg sm:text-xl font-bold text-warm-text">
+            <span class="lang-ja">お問い合わせ</span>
+            <span class="lang-en">Contact</span>
+          </h2>
+          <p class="mt-2.5 text-sm sm:text-base text-warm-muted leading-relaxed">
+            <span class="lang-ja">日本語研修や教育連携に関するご相談は、下記メールアドレスまでお気軽にご連絡ください。</span>
+            <span class="lang-en">For inquiries regarding Japanese language training or educational collaboration, please feel free to contact us by email.</span>
+          </p>
+
+          <div class="mt-5">
+            <a href="mailto:saburouhattori@smiledream-mm.com" class="inline-flex items-center gap-2.5 px-6 py-3 rounded-2xl bg-warm-white border border-warm-border text-warm-terracotta font-bold text-base sm:text-lg shadow-sm hover:border-warm-terracotta transition break-all">
+              <svg class="w-5 h-5 shrink-0" fill="none" stroke="currentColor" stroke-width="1.9" viewBox="0 0 24 24" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+              </svg>
+              <span>saburouhattori@smiledream-mm.com</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- 6. Footer -->
+  <footer class="border-t border-warm-border py-8 bg-warm-cream/60">
+    <div class="max-w-4xl mx-auto px-5 sm:px-8 text-center">
+      <p class="text-xs sm:text-sm text-warm-muted">
+        &copy; Japanese Language School Egao
+      </p>
+    </div>
+  </footer>
+
+  <!-- Language Switcher Script -->
+  <script>
+    function setLanguage(lang) {
+      document.body.setAttribute('data-lang', lang);
+      document.documentElement.lang = lang;
+
+      const btnJa = document.getElementById('btnLangJa');
+      const btnEn = document.getElementById('btnLangEn');
+
+      if (lang === 'ja') {
+        btnJa.className = 'px-3 py-1 rounded-full text-xs font-bold bg-warm-terracotta text-white transition';
+        btnEn.className = 'px-3 py-1 rounded-full text-xs text-warm-muted hover:text-warm-text transition';
+      } else {
+        btnEn.className = 'px-3 py-1 rounded-full text-xs font-bold bg-warm-terracotta text-white transition';
+        btnJa.className = 'px-3 py-1 rounded-full text-xs text-warm-muted hover:text-warm-text transition';
+      }
+    }
+  </script>
+</body>
+</html>
